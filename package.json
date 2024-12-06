@@ -8,9 +8,9 @@
   "author": "Safwan Parkar",
   "license": "MIT",
   "scripts": {
-    "dev": "node --watch src/index.js",
-    "start": "node src/index.js",
-    "start:debug": "node --nolazy --inspect-brk=9229 src/index.js",
+    "dev": "node --env-file=.env --watch src/index.js",
+    "start": "node --env-file=.env src/index.js",
+    "start:debug": "node --env-file=.env --nolazy --inspect-brk=9229 src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "lint": "eslint --fix .",
@@ -34,5 +34,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "3.4.2"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3"
   }
 }

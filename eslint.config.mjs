@@ -4,7 +4,8 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts}"] },
-  { languageOptions: { globals: globals.browser } },
+  { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,
   eslintPluginPrettierRecommended,
+  { ignores: ["pnpm-lock.yaml"] },
 ];
