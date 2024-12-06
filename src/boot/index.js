@@ -1,9 +1,11 @@
 import { getConfig } from "./config.js";
 import { getDiscordClient } from "./discord.js";
 
-const boot = () => {
+const boot = async () => {
   const config = getConfig();
-  const discordClient = getDiscordClient({ config: config.discordClient });
+  const discordClient = await getDiscordClient({
+    config: config.discordClient,
+  });
 
   return {
     config,

@@ -1,6 +1,8 @@
 /**
  * @typedef { object } DiscordClientConfig
  * @property { string } token
+ * @property { string } clientId
+ * @property { string } guildId
  */
 
 /**
@@ -17,7 +19,9 @@
 const getConfig = () => {
   return {
     discordClient: {
-      token: String(process.env.DISCORD_BOT_TOKEN),
+      token: String(process.env.DISCORD_TOKEN),
+      clientId: process.env.DISCORD_CLIENT_ID,
+      guildId: process.env.DISCORD_GUILD_ID,
     },
   };
 };
