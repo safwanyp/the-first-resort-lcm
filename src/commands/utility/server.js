@@ -4,7 +4,7 @@ import {
   getServerStatus,
   startServer,
   stopServer,
-} from "../../common/index.js";
+} from "../../clients/crafty.js";
 
 const statusCommand = async (interaction) => {
   const serverId = await getServerId();
