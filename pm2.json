@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "tfr-lcm",
+      "script": "pnpm",
+      "args": "start"
+    }
+  ]
+}
